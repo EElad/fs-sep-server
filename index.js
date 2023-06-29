@@ -5,15 +5,15 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 app.get('/ping', (req, res) => {
-res.send('PONG');
+   res.send('PONG');
 });
 
 app.use((err, req, res, next) => {
-console.error(err);
-res.status(500).send('Server Error!');
+   console.error(err);
+   res.status(500).send('Server Error!');
 });
 
-app.listen(port,() => {
-console.log('listen to port', port);
+app.listen(port, () => {
+   console.log('listen to port', port);
 });
 /**********************************/
